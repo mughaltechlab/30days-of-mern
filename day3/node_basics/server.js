@@ -10,12 +10,26 @@
 // console.log(os.version());
 // console.log(os.homedir());
 // console.log(os.freemem());
+// 6. Missing some JS APIS like fetch: But of course we can always pull in packages into node and there is a large amount of packages available through npm for node so we won't miss it hat much.
 
 // There are couple of values that we always have access to in node
 // console.log(__dirname);  // return a full directory
 // console.log(__filename); // return a full directory with filename
 
-//  we have more common module is path
-const path = require('path');
+//  we have common core module is path
 
-console.log(path.dirname(__filename));
+// const path = require('path');
+// console.log(path.dirname(__filename));
+// console.log(path.basename(__filename));
+// console.log(path.extname(__filename));
+// console.log(path.parse(__filename));
+
+
+// we can create our own module
+// const {add, subtract, multiply, divide} = require('./math.js');
+// const myMath = require('./math.js');
+
+// console.log('add 2 + 3 = ' + add(2,3));
+// console.log('subtract 3 - 3 =  ' + subtract(3,3));
+// console.log('multiply 2 * 3 = ' + multiply(2,3));
+// console.log('divide 4 / 2 = ' + divide(4,2));
