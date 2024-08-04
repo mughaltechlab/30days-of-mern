@@ -1,4 +1,4 @@
-const {readFile, writeFile} = require('node:fs');
+const {readFile, writeFile, appendFile} = require('node:fs');
 const path = require('path');
 
 // it Buffer, and shows only ASCI code 
@@ -14,17 +14,25 @@ const path = require('path');
 // });
 
 // it shows now actual content, we use 'utf-8' after path;
-// readFile(path.join(__dirname, 'intro.txt'),'utf-8' ,(err,data) => {
-//     if(err) throw err;
-//     console.log(data);
-// });
+readFile(path.join(__dirname, 'intro.txt'),'utf-8' ,(err,data) => {
+    if(err) throw err;
+    console.log(data);
+});
 
 
 // :: WRITE A FILE ::
 
 writeFile(path.join(__dirname,'files', 'message.txt'),'Writter by NodeJS.',(err) => {
     if(err) throw err;
-    console.log('Done..');
+    console.log('writeFIle..');
+});
+
+
+// :: APPEND MORE CONTENT IN A FILE ::
+
+appendFile(path.join(__dirname,'files', 'message.txt'),'\nWritter by appendFile.',(err) => {
+    if(err) throw err;
+    console.log('appendFile');
 });
 
 // console.log('Lonewolf is hunting...');
