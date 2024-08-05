@@ -5,11 +5,15 @@ const path = require('path');
 const fileOperation = async () => {
     try {
         // first read file
-        const data = await fsPromises.readFile(path.join(__dirname, 'intro.txt'),'utf8');
+        const data = await fsPromises.readFile(path.join(__dirname,'files', 'intro.txt'),'utf8');
+        // delete file after read
+        // await fsPromises.unlink(path.join(__dirname,'intro.txt'));
         // then write file and put the above data into this file
         await fsPromises.writeFile(path.join(__dirname,'files','promiseMessage.txt'), data);
         // now append some more content
         await fsPromises.appendFile(path.join(__dirname,'files','promiseMessage.txt'), '\nAppend More Content');
+        // rename file 
+        await fsPromises.rename(path.join(__dirname,'files','promiseMessage.txt'), path.join(__dirname,'files','NewPromiseMessage.txt'));
         
     } catch (err) {
         console.error(err);
