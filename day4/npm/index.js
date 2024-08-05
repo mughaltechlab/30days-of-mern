@@ -1,0 +1,1 @@
+console.log('Lonewolf is hunting...!');
