@@ -14,7 +14,7 @@ const logEvents = async (message) => {
     console.log(logItem);
     try {
         if (!fs.existsSync(path.join(__dirname, 'logs'))) {
-            fs.mkdir(path.join(__dirname, 'logs'), err => {
+            await fsPromises.mkdir(path.join(__dirname, 'logs'), err => {
                 if (err) throw err;
                 console.log('logs Directory created.')
             });

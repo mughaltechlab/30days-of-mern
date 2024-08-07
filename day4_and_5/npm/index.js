@@ -13,5 +13,5 @@ myEmitter.on('log', (msg) => logEvents(msg));
 // Emit event
 
 setTimeout(() => {
-    myEmitter.emit('log', 'LONE WOLF IS HUNTING..!');
+    myEmitter.emit('log', 'LONE WOLF IS EATING..!');
 }, 2000);
