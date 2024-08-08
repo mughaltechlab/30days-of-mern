@@ -13,6 +13,24 @@ const myEmitter = new Emitter();
 // PORT
 const PORT = process.env.PORT || 3500;
 
+// serve file
+const serveFile = async (filePath, contentType, response) => {
+    try {
+        const data = await fsPromises.readFile(filePath, 'utf8');
+        response.writeHead(200, {'Content-Type' : contentType});
+        response.end(data);
+    } catch (err) {
+        console.error(err);
+        response.statusCode(500);
+        response.end();
+    }
+    // response.statusCode = 200;
+    // response.setHeader('Content-Type', contentType);
+    // fs.readFile(filePath, 'utf8', (err, data) => {
+    //     response.end(data);
+    // })
+}
+
 // create a minimal server
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
@@ -53,7 +71,34 @@ const server = http.createServer((req, res) => {
                 : contentType === 'text/html'
                     ? path.join(__dirname, 'views', req.url)
                     : path.join(__dirname, req.url);
+    
+    if (!extension && req.url.slice(-1) !== '/') filePath += '.html';
 
+    const fileExists = fs.existsSync(filePath);
+
+    if (fileExists) {
+        // serve a file
+        serveFile(filePath, contentType, res);
+    } else {
+        // 404
+        // 301 redirect
+        switch(path.parse(filePath).base){
+            case 'old-page.html':
+                res.writeHead(301, {location : '/new-page.html'});
+                res.end();
+                break;
+            case 'www-page.html':
+                res.writeHead(301, {location : '/'});
+                res.end();
+                break;
+            default:
+                // serve a 404
+                serveFile(path.join(__dirname, 'views', '404.html'), 'text/html', res);
+                break;
+        }
+    }
+    
+    
     // if (req.url === '/' || req.url === 'index.html') {
     //     res.statusCode = 200;
     //     res.setHeader('Content-Type', 'text/html');
