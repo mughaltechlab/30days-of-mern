@@ -1,0 +1,5 @@
+2024-08-10	23:19:22	1a20b6f3-ad96-418b-91e4-696a0a84d486	GET	undefined	/index
+2024-08-10	23:19:23	3315253f-a36b-4ab7-ae5d-90d436232677	GET	undefined	/css/style.css
+2024-08-10	23:19:26	0bd542ef-9e9a-4eb9-83f4-b1c015302df3	GET	undefined	/new-page.html
+2024-08-10	23:19:26	7492bfb0-fccb-4c17-867e-d938abde4c8f	GET	undefined	/css/style.css
+2024-08-10	23:19:26	70d8f4e6-3012-44b0-af00-49889e33a62e	GET	undefined	/img/img1.jpg
