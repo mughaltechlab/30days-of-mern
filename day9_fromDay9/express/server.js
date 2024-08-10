@@ -16,7 +16,7 @@ const {logger} = require('./middleware/logEvents.js')
 //     next();
 // });
 // app.use((req,res,next) => logger(req,res,next));
-app.use(logger);
+app.use(logger); // use custom middleware
 
 /**
  * built-in middleware to handle urlencoded data
