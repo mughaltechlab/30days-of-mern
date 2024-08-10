@@ -5,7 +5,7 @@ const path = require('path');
 // PORT
 const PORT = process.env.PORT || 3500;
 
-app.get('^/$|/index.html', (req, res) => {
+app.get('^/$|/index(.html)?', (req, res) => {
     // res.send('WELCOME in MY worLD');
     // res.sendFile('./views/index.html', {root: __dirname});
     // res.sendFile(path.join(__dirname, 'views', 'index.html'));
@@ -14,6 +14,10 @@ app.get('^/$|/index.html', (req, res) => {
         if (err) console.log(err);
         res.end();
     })
+})
+
+app.get('/new-page(.html)?', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'new-page.html'));
 })
 
 
