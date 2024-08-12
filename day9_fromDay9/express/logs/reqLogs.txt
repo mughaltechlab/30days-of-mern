@@ -30,3 +30,7 @@
 2024-08-11	14:55:13	60fb741e-210b-416b-b614-bb434ebbcf0b	GET	undefined	/
 2024-08-11	14:57:07	5ecbc903-37fa-4649-b480-c6b2efa3e46c	GET	undefined	/index.html
 2024-08-11	14:57:07	bdfc1203-46d3-4f5f-8d4a-64181d4ba435	GET	undefined	/css/style.css
+2024-08-12	15:02:06	07830c62-a6aa-46e3-8dba-7e5e12d089d7	GET	undefined	/
+2024-08-12	15:02:06	513e691f-d915-457b-9f6b-bc3aee148be7	GET	undefined	/css/style.css
+2024-08-12	15:02:06	37d02a92-7854-4faa-8fcc-92dd14d81a1e	GET	undefined	/favicon.ico
+2024-08-12	15:02:15	c1970d61-680c-4a8b-94d2-7bc822231177	GET	undefined	/css/style.css
