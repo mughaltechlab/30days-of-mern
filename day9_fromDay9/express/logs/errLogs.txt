@@ -1,0 +1,5 @@
+2024-08-11	14:42:23	b6229225-9c0d-4a31-968d-b710d678f4ec	GET	undefined	/index.html
+2024-08-11	14:44:11	0f63c88c-56ce-40e5-a8a0-7fa5e757fa88	GET	undefined	/
+2024-08-11	14:51:21	57250441-d760-4c8d-a0a1-69102876bd29	OPTIONS	https://www.google.com	/
+2024-08-11	14:51:21	c1ebfc10-403e-4cec-be19-36343054feb7	GET	https://www.google.com	/
+2024-08-11	14:53:42	e64708cd-9577-439a-975a-86c4260ca356	GET	undefined	/
