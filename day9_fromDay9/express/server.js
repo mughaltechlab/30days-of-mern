@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 const {logger} = require('./middleware/logEvents.js');
 const errorHandler = require('./middleware/errorHandler.js');
+const subdirRouted = require('./routes/subdir.routes.js');
 
 /**
  * Middleware
@@ -56,6 +57,9 @@ app.use(express.json());
 // server static files
 app.use(express.static(path.join(__dirname, '/public')));
 
+// subdir routes
+app.use('/subdir', subdirRouted);
+
 
 // PORT
 const PORT = process.env.PORT || 3500;
@@ -85,28 +89,33 @@ app.get('/wolf(.html)?', (req, res, next) => {
 });
 
 
-const one = (req, res, next) => {
-    console.log('One');
-    next();
-};
+// const one = (req, res, next) => {
+//     console.log('One');
+//     next();
+// };
 
-const two = (req, res, next) => {
-    console.log('Two');
-    next();
-};
+// const two = (req, res, next) => {
+//     console.log('Two');
+//     next();
+// };
 
-const three = (req, res) => {
-    console.log('Three');
-    res.send('Hunts Finished');
-};
+// const three = (req, res) => {
+//     console.log('Three');
+//     res.send('Hunts Finished');
+// };
 
-app.get('/chain(.html)?', [one, two, three]);
 
-// default becasue express routes check in waterfall
-app.get('/*', (req, res) => {
-    res
-        .status(404)
-        .sendFile(path.join(__dirname, 'views', '404.html'));
+// default becasue express routes work in waterfall
+app.all('*', (req, res) => {
+    res.status(404);
+    
+    if (req.accepts('html')) {
+        res.sendFile(path.join(__dirname, 'views', '404.html'));
+    } else if (req.accepts('json')) {
+        res.json({error: '404 Not Found'});
+    } else if (req.accepts('txt')) {
+        res.type('txt').send('404 Not Found');
+    }
 })
 
 app.use(errorHandler);

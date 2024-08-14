@@ -3,3 +3,6 @@
 2024-08-14	12:26:25	0383ee42-4cdd-45fc-9b44-5c39d97fc553	GET	https://www.google.com	/
 2024-08-14	12:26:58	f244dad4-8e87-4bd6-956d-81261db05420	OPTIONS	https://www.google.com	/
 2024-08-14	12:26:58	f68c20c0-1c2c-433a-a418-a580411ce84c	GET	https://www.google.com	/
+2024-08-14	13:40:24	2b4fbd0b-a5c4-480e-aca0-43449a70f2d7	GET	undefined	/subdir/
+2024-08-14	13:58:37	d8b86e5b-c2af-41d0-b945-add344f4aa44	GET	undefined	/subdir/index
+2024-08-14	13:58:44	14a47b26-f92e-4ed4-b36f-ca5db14e87f7	GET	undefined	/subdir/index
