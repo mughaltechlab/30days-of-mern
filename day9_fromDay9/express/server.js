@@ -21,7 +21,7 @@ const errorHandler = require('./middleware/errorHandler.js');
 app.use(logger); // use custom middleware
 
 // WHITELIST create a sites-array of whiteList which we allow in CORS
-// todo :: in production mode we can erase 'http://127.0.0.1:5500', 'http://127.0.0.1:3500' ::
+// todo :: in production mode we can erase 'http://127.0.0.1:5500', 'http://127.0.0.1:3500' and add our domain in this whiteList array ::
 
 const whiteList = ['https://www.yoursite.com', 'http://127.0.0.1:5500', 'http://127.0.0.1:3500'];
 
