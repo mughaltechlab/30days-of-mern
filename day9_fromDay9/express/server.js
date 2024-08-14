@@ -2,7 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const path = require('path');
-const {logger, logEvents} = require('./middleware/logEvents.js');
+const {logger} = require('./middleware/logEvents.js');
+const errorHandler = require('./middleware/errorHandler.js');
 
 /**
  * Middleware
@@ -20,7 +21,7 @@ const {logger, logEvents} = require('./middleware/logEvents.js');
 app.use(logger); // use custom middleware
 
 // WHITELIST create a sites-array of whiteList which we allow in CORS
-const whiteList = ['https://www.yoursite.com', 'http://127.0.0.1:5500', 'http://127.0.0.1:3500'];
+const whiteList = ['https://www.yoursite.com', 'http://127.0.0.1:5500', 'http://127.0.0.1:3500', 'https://www.google.com'];
 
 // CORS options
 const corsOptions = {
@@ -105,13 +106,7 @@ app.get('/*', (req, res) => {
         .sendFile(path.join(__dirname, 'views', '404.html'));
 })
 
-app.use((err,req,res,next) => {
-        console.log(err.stack);
-        res.status(500).send('NOT ALLOWED BY CORS');
-        const msg = `${req.method}\t${req.headers.origin}\t${req.url}`;
-        logEvents(msg,'errLogs.txt');
-        next();
-});
+app.use(errorHandler);
 
 
 app.listen(PORT, () => {

@@ -34,3 +34,15 @@
 2024-08-12	15:02:06	513e691f-d915-457b-9f6b-bc3aee148be7	GET	undefined	/css/style.css
 2024-08-12	15:02:06	37d02a92-7854-4faa-8fcc-92dd14d81a1e	GET	undefined	/favicon.ico
 2024-08-12	15:02:15	c1970d61-680c-4a8b-94d2-7bc822231177	GET	undefined	/css/style.css
+2024-08-14	12:24:28	f549c327-44cc-4143-93a4-115ae533e516	GET	undefined	/
+2024-08-14	12:24:28	da3f4003-e790-4e74-99e4-67bf3d3442f6	GET	undefined	/css/style.css
+2024-08-14	12:24:29	4ba89bee-034c-4ed8-8ee0-00e88b5eb6f4	GET	undefined	/favicon.ico
+2024-08-14	12:25:43	f3b1387f-e372-4acd-bab0-9ad5ad5a3616	GET	undefined	/
+2024-08-14	12:26:25	b0a64932-8349-484c-86b6-2b05b2398348	OPTIONS	https://www.google.com	/
+2024-08-14	12:26:25	5f97eada-268a-497c-9906-2ef47563dd28	GET	https://www.google.com	/
+2024-08-14	12:26:58	b82a8fb3-1c1b-4224-9550-665399572bf1	OPTIONS	https://www.google.com	/
+2024-08-14	12:26:58	e30a810b-5d45-429b-831a-fbdf1d71fd7c	GET	https://www.google.com	/
+2024-08-14	12:27:05	d34fb6e5-89eb-4c18-8dfc-f5b22051b799	GET	undefined	/
+2024-08-14	12:27:05	1510f2be-938f-45c4-bdff-acfaa153ffc9	GET	undefined	/css/style.css
+2024-08-14	12:27:35	62c24383-c94f-4969-82e2-84c2b4ec35ba	OPTIONS	https://www.google.com	/
+2024-08-14	12:27:35	ef9d5377-a496-4736-ba2d-fb35269a690a	GET	https://www.google.com	/
