@@ -21,11 +21,14 @@ const errorHandler = require('./middleware/errorHandler.js');
 app.use(logger); // use custom middleware
 
 // WHITELIST create a sites-array of whiteList which we allow in CORS
-const whiteList = ['https://www.yoursite.com', 'http://127.0.0.1:5500', 'http://127.0.0.1:3500', 'https://www.google.com'];
+// todo :: in production mode we can erase 'http://127.0.0.1:5500', 'http://127.0.0.1:3500' ::
+
+const whiteList = ['https://www.yoursite.com', 'http://127.0.0.1:5500', 'http://127.0.0.1:3500'];
 
 // CORS options
 const corsOptions = {
     origin: (origin, callback) => {
+        // todo :: in production mode we can erase " OR condition ( || !origin ) " ::
         if (whiteList.indexOf(origin) !== -1 || !origin) {
             callback(null, true)
         } else {

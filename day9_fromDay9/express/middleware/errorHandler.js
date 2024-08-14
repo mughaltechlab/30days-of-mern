@@ -1,4 +1,4 @@
-const {logEvents} = require('../middleware/logEvents.js');
+const {logEvents} = require('./logEvents.js');
 
 const errorHandler = (err,req,res,next) => {
     console.log(err.stack);

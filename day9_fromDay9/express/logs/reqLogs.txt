@@ -46,3 +46,7 @@
 2024-08-14	12:27:05	1510f2be-938f-45c4-bdff-acfaa153ffc9	GET	undefined	/css/style.css
 2024-08-14	12:27:35	62c24383-c94f-4969-82e2-84c2b4ec35ba	OPTIONS	https://www.google.com	/
 2024-08-14	12:27:35	ef9d5377-a496-4736-ba2d-fb35269a690a	GET	https://www.google.com	/
+2024-08-14	12:31:05	43333ae0-2504-4eae-a986-a1289ae9f55b	GET	undefined	/
+2024-08-14	12:31:05	a4d60452-d521-4cb5-ad47-1b28964e7ddd	GET	undefined	/css/style.css
+2024-08-14	12:31:07	a824d589-2042-4a82-94e6-015a8d32526c	GET	undefined	/
+2024-08-14	12:31:07	68ec9c2c-2d75-470e-b421-96e77cd5e492	GET	undefined	/css/style.css
