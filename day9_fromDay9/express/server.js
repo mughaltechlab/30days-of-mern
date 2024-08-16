@@ -27,6 +27,19 @@ app.use(logger); // use custom middleware
 const whiteList = ['https://www.yoursite.com', 'http://127.0.0.1:5500', 'http://127.0.0.1:3500'];
 
 // CORS options
+// const corsOptions = {
+//     origin: (origin, callback) => {
+//         // todo :: in production mode we can erase " OR condition ( || !origin ) " ::
+//         if (whiteList.indexOf(origin) !== -1 || !origin) {
+//             callback(null, true)
+//         } else {
+//             // console.log(origin);  // undefined
+//             console.log(whiteList.indexOf(origin));
+//             callback(new Error('Not allowed by CORS'));
+//         }
+//     },
+//     optionsSuccessStatus: 200
+// };
 const corsOptions = {
     origin: (origin, callback) => {
         // todo :: in production mode we can erase " OR condition ( || !origin ) " ::
